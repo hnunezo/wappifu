@@ -1,0 +1,12 @@
+POST http://localhost:3001/api/waifus
+Content-Type: application/json
+
+{
+    "name": "sumire",
+    "lastname": "heanna",
+    "day": "21",
+    "month": "5",
+    "anime": "love live superstars",
+    "seiyuuname": "naomi",
+    "seiyuulastname": "payton"
+}
