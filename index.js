@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-app.use(express.static("build"));
+app.use(express.static(path.join(__dirname, "build")));
 
 app.use(cors());
 //JSON PARSER AGREGA BODY A LA REQUEST
@@ -30,6 +30,10 @@ let waifus = [
     seiyuulastname: "rikyako",
   },
 ];
+
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 app.get("/", (request, response) => {
   response.send("<h1>Hello node</h1>");
