@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static("build"));
 
 app.use(cors());
 //JSON PARSER AGREGA BODY A LA REQUEST
